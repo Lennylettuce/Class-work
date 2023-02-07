@@ -10,10 +10,13 @@ body {
 main {
   display: flex;
   margin-top: 2%;
+  flex-wrap: wrap;
+  /*added flex-wrap and that made screen scroll vertically*/
 }
 
 .main-header {
   display: flex;
+  /*defines how to distrubute the empty space between child elements*/
   justify-content: space-between;
   padding: 60px;
   background: #13293d;
@@ -21,6 +24,7 @@ main {
 }
 
 .card {
+  /*a flex-basis of 200px sets the starting width, flex grow value of 1 allows elements to evenly grow to fill space*/
   flex: 1 0 0;
   padding: 10px;
   text-align: center;
@@ -29,6 +33,7 @@ main {
 }
 
 .card header {
+  flex: 1 0 0;
   padding: 20px;
   background: #13293d;
   color: #fff;
