@@ -85,7 +85,8 @@ button {
   cursor: pointer;
 }
 
-/* What does this CSS rule do? */
+/* What does this CSS rule do? 
+  This CSS rule turns off those default styles, appearance none , then apply your own*/
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -112,12 +113,15 @@ select:hover, button:hover {
   box-shadow: 0 0 5px #999;
 }
 
-/* What does this pseudo-class mean? */
+/* What does this pseudo-class mean?
+ makes text border this style when focused, clicked on
+ */
 .text-input:focus {
   border-right-width: 5px;
 }
 
-/* What does this pseudo-class mean? */
+/* What does this pseudo-class mean? 
+links your chosen placeholder in the text field, given text fields dashed border here*/
 .text-input:placeholder-shown {
   border-style: dashed;
 }
@@ -136,13 +140,15 @@ select:hover, button:hover {
   margin-right: 2%;
 }
 
-/* What does this selector do? */
+/* What does this selector do?
+checkbox, checked with label styled*/
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
-/* What does this selector do? */
+/* What does this selector do?
+gives text after one clicks on checkbox plus sign calls sibling selector*/
 .checkbox:checked + label::after {
   margin-left: 10px;
   font-size: 90%;
