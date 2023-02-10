@@ -1,0 +1,48 @@
+/*
+	for project stu mini 28
+*/
+:root {
+	--color: rgb(156, 10, 156);
+	--dim: 50px;
+	--
+}
+
+::selection {
+	background-color: blue;
+}
+
+body{
+
+}
+
+header{
+
+}
+
+section {
+
+}
+
+footer{
+
+}
+
+.CSS-codes{
+	flex: 1;
+  	background-color: var(--color);
+  	padding: var(--dim);
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-evenly;
+}
+
+.card{
+	border-style: solid;
+  	border-width: 1px;
+  	border-radius: var(--dim) var(--dim) 0 0;
+  	padding: 10px;
+  	flex: 0 0 300px;
+  	box-shadow: 10px 10px 5px #252525;
+  	margin: 20px;
+}
+
