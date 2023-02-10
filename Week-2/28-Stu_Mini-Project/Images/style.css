@@ -1,0 +1,77 @@
+/*
+	for project stu mini 28
+*/
+:root {
+	--color: rgb(156, 10, 156);
+	--dim: 50px;
+	--
+}
+
+::selection {
+	background-color: blue;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+}
+
+header{
+	display: block;
+}
+
+section{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+footer{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.CSS-codes{
+	flex: 1;
+  	background-color: var(--color);
+  	padding: var(--dim);
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-evenly;
+}
+
+.card{
+	flex: 1 0 0;
+	padding: 10px;
+	text-align: center;
+	border-style: dashed;
+	border-width: 3px;
+}
+
+@media screen and (mad-width: 780px) {
+	section{
+		flex-wrap: wrap;
+	}
+	
+	div{
+		width: 100%;
+		flex-basis: 0px;
+		flex-grow: 1;
+		flex-shrink: 0;
+
+	}
+	.card {
+	  width; 100%;
+	}
+	
+  
+	header {
+	  flex-wrap: wrap;
+	}
+  }
+  
+  	
