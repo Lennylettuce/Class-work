@@ -64,24 +64,11 @@ footer{
 }
 
 @media screen and (mad-width: 780px) {
-	section{
+	main,
+	nav{
+		flex-direction: row;
 		flex-wrap: wrap;
-	}
-	
-	div{
-		width: 100%;
-		flex-basis: 0px;
-		flex-grow: 1;
-		flex-shrink: 0;
 
-	}
-	.card {
-	  width; 100%;
-	}
-	
-  
-	header {
-	  flex-wrap: wrap;
 	}
   }
   
