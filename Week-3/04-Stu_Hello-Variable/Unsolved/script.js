@@ -1,11 +1,19 @@
 // Write Your JavaScript Code Here
-console.log
-var personName = {
-    make: "Aubrey"
+
+var personName = "Aubrey";
+if (personName === "Aubrey") {
+    var personName = "Ken";
+        console.log("Ken");
 }
-var pet = {
-    make: "20"
+
+var pets = 20;
+if (pets === 20) {
+    var pets = 5;
+        console.log(5);
 }
-var funFact = {
-    make: "I'm a LMT."
+
+var funFact = "Coding is fun!";
+if (funFact === "Coding is fun!") {
+    var funFact = "new message";
+        console.log("new message");
 }
