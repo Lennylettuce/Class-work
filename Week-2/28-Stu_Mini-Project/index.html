@@ -9,46 +9,46 @@
 <body>
 	<header>
 		<h1>CSS Snippet Cheatsheet</h1>
-		<p>Ever have trouble remembering the syntax for your favorite css code? Here you can give it a home! Click on the codes below to use anytime!</p>
+		<p class="box">Ever have trouble remembering the syntax for your favorite css code? Here you can give it a home! Click on the codes below to use anytime!</p>
 	</header>
 
 <div class="CSS-codes">
 <section class="card">
 	<header>Flexbox-Row</header>
-	<p>comment here</p>
-	<p class="box">code snippet here</p>
+	<p>Use these three properties to create a flexbox row layout.</p>
+	<p class="box">.row {<br>display: flex;<br>flex-direction: row;<br>flex-wrap: wrap;<br> }</p>
 </section>
 
 <section class="card">
 	<header>Flexbox-Column</header>
-	<p>comment here</p>
-	<p class="box">cod snipet here</p>
+	<p>Use these properties to create a flexbox column layout.</p>
+	<p class="box">.column {<br>dislay: flex;<br>flex-direction:column;<br>}</p>
 </section>
 
 <section class="card">
 <header>CSS Grid Layout</header>
-<p>comments</p>
-<p class="box">code snipet</p>
+<p>Build a 12 column grid using flexbox grid layout.</p>
+<p class="box">.grid {<br>display: grid;<br>width: 100%;<br>grid-template-columns:<br>repeat(12,1fr);<br>}</p>
 </section>
 </div>
 
 <div class="CSS-codes">
 <section class="card">
-	<header>Linear Gradient</header>
-	<p>comment</p>
-	<p class="box">code snippet</p>
+	<header class>Linear Gradient</header>
+	<p>This code creates a linear gradient starting from top to bottom.</p>
+	<p class="box">.linear-gradient-background {<br>background-image:linear-gradient<br>(rgba color 1)0%<br>(rgba color 2)100%<br>}</p>
 </section>
 
 <section class="card">
-	<header>Box Transition Glow</header>
-	<p>comment</p>
-	<p class="box">code snippet</p>
+	<header class>Box Transition Glow</header>
+	<p>Use transition and hover to create glow effect upon hover.</p>
+	<p class="box">.code-card .card-header {<br>border-radius:8px;<br>transition:all 0.5sec<br>ease-in-out<br>}<br>.code-card:hover,<br>.code-card:hover.<br>card-header {<br>box-shadow:inset<br>colors<br>}</p>
 </section>
 
 <section class="card">
-	<header>Overlay Card with Title</header>
-	<p>commet</p>
-	<p class="box">code snipet</p>
+	<header class>Overlay Card with Title</header>
+	<p>Use position properties and negative margins to move the header out of normal flow.</p>
+	<p class="box">.card-header {<br>position:relative;<br>margin-top:-20px;<br>}</p>
 </section>
 
 </div>
