@@ -17,3 +17,16 @@ if (funFact === "Coding is fun!") {
     var funFact = "new message";
         console.log("new message");
 }
+
+var Potato = "Aubrey";
+    Potato = "me";
+    console.log(Potato)
+
+
+console.log(Potato + "new message")
+
+var humanName = "Aubrey";
+var petName = "Theo";
+var funMe = "I love cats";
+
+console.log("I" + humanName + "have" + petName + funMe)
