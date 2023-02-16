@@ -1,4 +1,6 @@
 // TODO: Declare variable 'shout' with the value 'Shout' so it's available to `justShout` and `shoutItAllOut` functions
+var shout = "SHOUT"
+
 function justShout() {
   console.log(shout + ", " + shout);
   return;
@@ -19,7 +21,9 @@ function sayLions() {
   return;
 }
 
+ var animal = "Tigers";
 function sayTigers() {
+ 
   console.log("and " + animal + " and "); 
   return;
 }
