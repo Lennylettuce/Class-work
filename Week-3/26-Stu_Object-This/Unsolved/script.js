@@ -34,7 +34,7 @@ var investor = {
 };
 
 // TODO: After commenting, check your results!
-//woohoo got this!
+//woohoo got this! print helloThis function here
 helloThis();
 
 // TODO: After commenting, check your results!
