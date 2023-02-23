@@ -1,4 +1,4 @@
-# 🏗️ Implement Event Handler on Mouse Click
+ # 🏗️ Implement Event Handler on Mouse Click
 
 Work with a partner to implement the following user story:
 
