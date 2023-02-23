@@ -22,6 +22,19 @@ site3El.children[1].children[0].setAttribute("style", "padding:10px;");
 
 // Write Your Code Below
  //h4 info stored in one variable
- // make h4 text blue, 30px, bold
+ var h4s = document.querySelectorAll("h4");
+ var h1s = document.querySelectorAll("h1");
+  // make h4 text blue, 30px, bold
  //padding left 10px, margin 0
- 
+ h4s[0].setAttribute("style", "color:blue; font-size:30px; font-weight:bold;");
+ h4s[1].setAttribute("style", "color:blue; font-size:30px; font-weight:bold;");
+ h4s[2].setAttribute("style", "color:blue; font-size:30px; font-weight:bold;");
+
+ h1s[0].setAttribute("style", "padding-left:10px;", "margin:0");
+
+ //use for loop to do multiple commands
+
+ // for(var i = 0; i < h4s.length; i++){
+//      h4s[i].setAttribute("style", etc etc..);
+ //}
+ //that'll make things much quicker
