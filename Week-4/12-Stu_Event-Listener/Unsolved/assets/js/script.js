@@ -5,25 +5,25 @@ var countEl = document.querySelector("#count");
 
 function setCounterText() {
   countEl.textContent = count;
-
-  var timeInterval = setInterval(function(){
-    
-  if(count > 0){
-    
-  }else(){
-    timeInterval
-  }
-
-  }, 1000);
-
 } 
 
 
 
+
 // TODO: Add event listener to increment button
+  //order matters!
+  //call function in/after the listener
 
-incrementEl.addEventListener('click' , setInterval);
+incrementEl.addEventListener('click' , function(){
+  count++;
+  setCounterText();
 
+});
 // TODO: Add event listener to decrement button 
 
-decrementEl.addEventListener('click' , setInterval);
+decrementEl.addEventListener('click' , function(){
+  count--;
+  setCounterText();
+});
+
+//

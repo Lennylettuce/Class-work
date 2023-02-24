@@ -1,22 +1,27 @@
-var keyValue = querySelector("#key");
-var keyCode = querySelector("#code");
-//gave them variables to i can work with them in function below, query select to id from html
+
+ 
+
+
+  // TODO: Add Event Listener for "key up/down" event
+  //teacher makes this look so easy, lucky guy! lol!
 
 function keydownAction(event) {
-  // TODO: Complete keydown function
-  //add code for value input and keycode
+  var key= event.key;
+  var code = event.code;
 
-  
+//.innerhtml does more, when adding elements/style in DOM
+//has more info to access than .textContent
 
-  document.querySelector("#status").innerHTML = "KEYDOWN Event";
-  event.preventDefault();
+  document.querySelector("#key").textContent = key;
+  document.querySelector("#code").textContent = code;
+  document.querySelector("#status").innerHTML = "KEYDOWN Event"
 }
-
-function keyupAction() {
+ 
+function keyupAction(event) {
   document.querySelector("#status").innerHTML = "KEYUP Event";
 }
 
-document.addEventListener("keyup", keyupAction);
-// TODO: Add Event Listener for "keydown" event
 
+document.addEventListener("keyup" , keyupAction);
 document.addEventListener("keydown", keydownAction);
+

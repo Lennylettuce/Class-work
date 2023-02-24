@@ -15,7 +15,7 @@ function countdown() {
     timeLeft--;
     //plug text for user in addition to time left
     timeLeft.textContent = timeLeft + "seconds left."
-    //this statement will clear the timer so it doesnt eat up your memory
+    //this statement will clear the timer so it doesnt eat up your memory 
     if(timeLeft === 0){
       clearInterval(timeInterval);
       displayMessage();

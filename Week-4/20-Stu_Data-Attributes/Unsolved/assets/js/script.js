@@ -1,7 +1,19 @@
-var container = document.querySelector(".container");
+var boxEs = document.querySelector(".container");
 
-container.addEventListener("click", function(event) {
+boxEs.addEventListener("click" , function(event){
   var element = event.target;
+  var number = element.getAttribute("data-number");
+  var state = element.getAttribute("data-state");
 
-  // TODO: Complete function
-});
+    if(state === "hidden") {
+      //maybe change number to visible
+      element.dataset.state = "number";
+      element.setAttribute("data-state", "number");
+        //above are two examples of the same code
+      element.setAttribute("class", element.dataset.number);
+    
+    } else {
+      element.dataset.state = "hidden";
+      element.setAttribute("class", element.dataset.state);
+    }
+  });

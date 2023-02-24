@@ -26,4 +26,12 @@ submitEl.addEventListener("click", addTip);
 
 //add event.preventDefault(); to the function event is in.
 //what does it mean?
-//
+//when an event happens, there's usually a browser default
+//button in browser-button tries to submit/clear data so...
+//use preventDefault method to 
+//keep event listener not so large
+//split up functions
+//define event function or do all together
+//preventDefault does literally what it says it does 
+//for browser behavior
+//prevents unexpected behaviors 
