@@ -2,6 +2,7 @@ var emailInput = document.querySelector("#email");
 var passwordInput = document.querySelector("#password");
 var signUpButton = document.querySelector("#sign-up");
 var msgDiv = document.querySelector("#msg");
+//use these two for first TODO
 var userEmailSpan = document.querySelector("#user-email");
 var userPasswordSpan = document.querySelector("#user-password");
 
@@ -14,7 +15,19 @@ function displayMessage(type, message) {
 
 function renderLastRegistered() {
   // TODO: Retrieve the last email and password and render it to the page
+    //added those items as variable, did if statement then set them to value
+  
+  var email = localStorage.getItem("email");
+  var password = localStorage.getItem("password");
+
+  if (email === null || password === null){
+    return;
+  } 
+
+  userEmailSpan.textContent = email;
+  userPasswordSpan.textContent= password;
 }
+
 
 signUpButton.addEventListener("click", function(event) {
   event.preventDefault();
@@ -30,5 +43,10 @@ signUpButton.addEventListener("click", function(event) {
     displayMessage("success", "Registered successfully");
 
   // TODO: Save email and password to localStorage and render the last registered user
-  }
+    localStorage.setItem("saved email", email);
+    localStorage.setItem("saved password", password);
+
+    userEmailSpan.textContent = email;
+    userPasswordSpan.textContent = password;
+}
 });
