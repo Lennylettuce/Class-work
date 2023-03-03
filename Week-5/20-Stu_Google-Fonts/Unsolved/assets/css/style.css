@@ -11,6 +11,11 @@
   background-color: var(--light);
 }
 
+body{
+  font-family: 'Roboto Mono', monospace;
+  
+}
+
 .custom-navbar {
   background-color: var(--teal);
 }
@@ -47,4 +52,8 @@
 .custom-card-header {
   background-color: var(--teal);
   color: var(--lightteal);
+}
+
+.custom-fonts-hero{
+  font-family: 'Tilt Prism', cursive;;
 }

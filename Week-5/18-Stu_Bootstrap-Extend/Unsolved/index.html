@@ -16,9 +16,11 @@
     <title>Extending Bootstrap</title>
   </head>
 
+  <!--dynamically in js look for card in lines 7-28-->
+
   <body>
     <!-- TODO: Create and apply a custom class name "custom-navbar" -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg custom-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">The Guestbook</a>
         <button
@@ -35,9 +37,9 @@
         <div class="collapse navbar-collapse" id="navbar">
           <div class="navbar-nav ms-auto">
             <!-- TODO: Update all <a> elements in the navbar and their :hover styles -->
-            <a class="nav-item nav-link" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link custom-nav-link" href="#">Home</a>
+            <a class="nav-item nav-link custom-nav-link" href="#">Features</a>
+            <a class="nav-item nav-link custom-nav-link" href="#">Pricing</a>
           </div>
         </div>
       </div>
@@ -48,7 +50,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-6 text-end">
-            <h1>Welcome to the guestbook!</h1>
+            <h1 class = "custom-hero">Welcome to the guestbook!</h1>
             <p class="lead">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Assumenda optio expedita consequuntur odio nostrum alias id eius
@@ -75,7 +77,7 @@
                 ></textarea>
               </div>
               <!-- TODO: Remove the `btn-primary` class and add `custom-btn` -->
-              <button class="btn btn-primary">Leave your mark.</button>
+              <button class="custom-btn">Leave your mark.</button>
             </form>
           </div>
         </div>
