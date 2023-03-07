@@ -65,4 +65,11 @@ $(function () {
 });
 
 // Add interaction here
-//
+//make sure to plus in your targetting tags names
+$( function() {
+  $( "#skills-list" ).sortable({
+    placeholder: "ui-state-highlight"
+  });
+  $( "#skills-list" ).disableSelection();
+} );
+
