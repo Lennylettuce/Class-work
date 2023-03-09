@@ -2,6 +2,7 @@ var requestUrl = 'https://api.github.com/orgs/Netflix/repos';
 
 // JQuery AJAX
 // TODO: Comment on how AJAX returns an API call
+// AJAX need to add method in code
 $.ajax({
   url: requestUrl,
   method: 'GET',
@@ -12,6 +13,11 @@ $.ajax({
 
 // Browser Fetch Method
 // TODO: Comment on how Fetch returns an API call
+// has already been parsed with JSON method 
+//default is GET so dont have to pass in option
+//have to pass in method for remove or other method to change that
+//.then(function()) tells browser that these functions should happen outside the call stack 
+// more modern way to .then is .asynchronized function with an .await() call before it i believe he said
 fetch(requestUrl)
   .then(function (response) {
     return response.json();
@@ -23,6 +29,7 @@ fetch(requestUrl)
 
 // Browser XMLHttpRequest
 // TODO: Comment on how XMLHttpRequest returns an API call
+// requires stringify JSON to display as readable array
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === XMLHttpRequest.DONE) {

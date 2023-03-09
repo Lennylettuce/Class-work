@@ -5,7 +5,8 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
   // Insert the API url to get a list of your repos
-  var requestUrl = '';
+  //what's behind the .com/what you want to search for
+  var requestUrl = 'https://api.github.com/users/LENNYLETTUCE/repos';
 
   fetch(requestUrl)
     .then(function (response) {
