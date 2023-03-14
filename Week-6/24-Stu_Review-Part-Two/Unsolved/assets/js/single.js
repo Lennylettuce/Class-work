@@ -4,17 +4,17 @@ var limitWarningEl = document.querySelector('#limit-warning');
 
 var getRepoName = function () {
   // Where is this value coming from?
-  // TODO: Write your answer here
+  // TODO: doc.location gets you part of url, split method splits an array, plugging 1st index from returned queryString .search returns things behind ? in url
   var queryString = document.location.search;
   var repoName = queryString.split('=')[1];
 
   if (repoName) {
     repoNameEl.textContent = repoName;
-
+    //runs if text is entered into reponame section
     getRepoIssues(repoName);
   } else {
     // Under what condition will this run?
-    // TODO: Write your answer here
+    // TODO: this will run if alt lang button pressed leads to other url from index
     document.location.replace('./index.html');
   }
 };
@@ -28,7 +28,7 @@ var getRepoIssues = function (repo) {
         displayIssues(data);
 
         // What is this checking for? Under what condition will this be `true`?
-        // TODO: Write your answer here
+        // TODO: response gives back this link and we have function display warning to display alt link for user(repo)
         if (response.headers.get('Link')) {
           displayWarning(repo);
         }
@@ -41,7 +41,7 @@ var getRepoIssues = function (repo) {
 
 var displayIssues = function (issues) {
   // Is there a difference between this and `!issues.length`?
-  // TODO: Write your answer here
+  // TODO: this states that if issues length is 0 or empty, not just not issues.length
   if (issues.length === 0) {
     issueContainerEl.textContent = 'This repo has no open issues!';
     return;
@@ -72,7 +72,8 @@ var displayIssues = function (issues) {
 };
 
 // What does this function do?
-// TODO: Write your answer here
+// TODO: this function displays a message prompt to user to press link
+//then with each it
 var displayWarning = function (repo) {
   limitWarningEl.textContent = 'To see more than 30 issues, visit ';
 
