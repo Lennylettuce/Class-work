@@ -11,9 +11,11 @@ console.log(originalArray);
 
 
 // TODO: Describe how map is working in the example below. What will the value of tripledArray be?
+// .map here is taking data from array and multiplying it by 3, well each item in array by 3, from original array
 const tripledArray = originalArray.map(data => data * 3);
 
 // TODO: Describe how map is working in the example below. What will the value of oddOrEven be?
+// in map method taking each num from array and if its divisible by 2 return even if not its odd
 const oddOrEven = originalArray.map(num => {
   if (num % 2 === 0) {
     return 'even'
@@ -21,3 +23,4 @@ const oddOrEven = originalArray.map(num => {
     return 'odd'
   }
 });
+console.log(tripledArray);
