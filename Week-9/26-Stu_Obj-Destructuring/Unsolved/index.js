@@ -1,13 +1,14 @@
 // 1. Object
 const nodejs = {
-  pkgName: 'Node.js',
-  type: 'JavaScript runtime environment',
+  name: 'Node.js',
+  types: 'JavaScript runtime environment',
 };
 
 // TODO: Destructure the object 'nodejs'
+const { name, types } = nodejs;
 
-console.log(pkgName); // <= Node.js
-console.log(type); // <= JavaScript runtime environment
+console.log(name); // <= Node.js
+console.log(types); // <= JavaScript runtime environment
 
 // 2. Nested Object
 const js = {
@@ -27,6 +28,8 @@ const js = {
 };
 
 // TODO: Destructure the nested object 'js'
+const { framework1, framework2 } = js.tools.frameworks;
+
 
 console.log(framework1); // <= AngularJS
 console.log(framework2); // <= Vue.js
@@ -35,6 +38,6 @@ console.log(framework2); // <= Vue.js
 const languages = ['HTML', 'CSS', 'JavaScript'];
 
 // TODO: Destructure the array 'languages'
-
+const [markup, style, scripting] = languages;
 console.log(markup, style, scripting); // <= HTML CSS JavaScript
 console.log(markup); // <= HTML
