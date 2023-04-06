@@ -5,6 +5,7 @@
         this.text = text;
         this.createdOn = createdOn;
         this.printMetaData = function () {
+            //can also use ${this.authorName} - template literal instead of this way
             console.log('Created by' + authorName + 'on' + createdOn);
         };
     }
