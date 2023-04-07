@@ -1,4 +1,4 @@
-// A constructor Arithmetic is created.
+n// A constructor Arithmetic is created.
 function Arithmetic() {}
 
 // Constructor Arithmetic is given a sum method that returns two numbers added together.
