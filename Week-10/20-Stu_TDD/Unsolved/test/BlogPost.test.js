@@ -22,6 +22,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+    //test to see if blogpost title is My First Post
   describe('Initialize title', () => {
     it('should set title properly', () => {
       const title = 'My First Post';
@@ -66,6 +67,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+    //use addComment method to add comment to blogpost
   describe('addComment() method', () => {
     it('should add comment to comments array', () => {
       const blogpost = new BlogPost();

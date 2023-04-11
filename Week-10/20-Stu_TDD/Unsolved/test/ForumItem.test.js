@@ -45,6 +45,7 @@ describe('ForumItem', () => {
   });
 
   // Add a comment describing this test.
+    // 
   describe('printMetaData() method', () => {
     it('should print message with data', () => {
       const forumitem = new ForumItem(

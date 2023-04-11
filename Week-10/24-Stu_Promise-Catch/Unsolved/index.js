@@ -18,4 +18,8 @@ readFile('./data/post.json', 'utf-8')
   })
   .then(() => {
     console.log('Created post.html');
-  });
+  })
+  //will catch an error in any part of the code above - woohoo!
+.catch(err => {
+  console.error('error while doing writeFile ${err.message}');
+});
