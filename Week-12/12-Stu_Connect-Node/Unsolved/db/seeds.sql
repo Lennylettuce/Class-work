@@ -5,3 +5,4 @@ VALUES ("Elliot", "Smith", false),
        ("Verónica", "Rodriguez", false),
        ("Igor", "Ivanov", true);
        
+/*code to add values in the table columns*/

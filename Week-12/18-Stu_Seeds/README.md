@@ -1,4 +1,4 @@
-# 🐛 Seed Data Not Populating Table
+ # 🐛 Seed Data Not Populating Table
 
 Work with a partner to resolve the following issue(s):
 
