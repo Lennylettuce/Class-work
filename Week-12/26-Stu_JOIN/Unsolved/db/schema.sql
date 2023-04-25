@@ -13,8 +13,6 @@ CREATE TABLE favorite_books (
   book_name VARCHAR(30) NOT NULL,
   in_stock BOOLEAN,
   book_price INT,
-  FOREIGN KEY (book_price)
-  REFERENCES book_prices(id)
-  ON DELETE SET NULL
+  FOREIGN KEY (book_price)REFERENCES book_prices(id)ON DELETE SET NULL
 );
 
