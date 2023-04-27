@@ -3,8 +3,17 @@ const sequelize = require('../config/connection');
 
 class Book extends Model {}
 
+//sequalize will pluralize, opt out with extra config property freeze table name
+
 Book.init(
   {
+    //add the book id PRIMKEY here
+    book_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+
     title: {
       type: DataTypes.STRING
     },
@@ -28,7 +37,9 @@ Book.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: 'book'
+    modelName: 'book',
+    //here
+    freezeTableName: true
   }
 );
 

@@ -2,24 +2,32 @@ const router = require('express').Router();
 const Book = require('../../models/Book');
 
 // TODO: Add a comment describing the purpose of this route
+  //promise based get req, HOMEPAGE , using Book const to link data from model/Book folder
 router.get('/', (req, res) => {
-  // TODO: Add a comment describing the functionality of this method
+  // TODO: Add a comment describing the functionality of this method 
+    // use findAll method to display whole table data, and return that response in json
   Book.findAll().then((bookData) => {
     res.json(bookData);
   });
 });
 
 // TODO: Add a comment describing the purpose of this route
+  // get req for paperbacks data page
 router.get('/paperbacks', (req, res) => {
+  //talks to single table from models
   Book.findAll({
     // TODO: Add a comment describing the functionality of this property
+      //order by, self explanitary but complex lol
     order: ['title'],
     // TODO: Add a comment describing the functionality of this property
+      //filter query (this is what i want look at in where clause)
     where: {
       is_paperback: true
     },
     attributes: {
       // TODO: Add a comment describing the functionality of this property
+        //add specific properties to exclude in this
+          //An object, where each attribute is a column of the table
       exclude: ['is_paperback', 'edition']
     }
   }).then((bookData) => {
@@ -28,8 +36,10 @@ router.get('/paperbacks', (req, res) => {
 });
 
 // TODO: Add a comment describing the purpose of this route
+  // route for just id page
 router.get('/:id', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+    //The findByPk method obtains only a single entry from the table, using the provided primary key.
   Book.findByPk(req.params.id).then((bookData) => {
     res.json(bookData);
   });
