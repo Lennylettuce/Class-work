@@ -5,6 +5,14 @@ const sequelize = require('../config/connection');
 class User extends Model {
   checkPassword(userPassword) {
     // TODO: Complete the instance method
+
+    return bcrypt.compareSync(userPassword, this.password);
+
+   /* what i wrote: if (this.password === bcrypt.hash(userPassword.password)){
+      return true;
+    } else {
+      return false;
+    }*/
   }
 }
 
