@@ -38,6 +38,7 @@ router.post('/', async (req, res) => {
   try {
     const locationData = await LibraryCard.create({
       // TODO: Add a comment describing where the value of `req.body.reader_id` comes from
+        //comes from the LibraryCard class in the corresponding js file
       reader_id: req.body.reader_id,
     });
     res.status(200).json(locationData);

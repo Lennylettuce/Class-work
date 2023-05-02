@@ -41,7 +41,7 @@ Book.init(
         model: 'reader',
         key: 'id',
       },
-    },
+    }
   },
   {
     sequelize,
