@@ -42,5 +42,9 @@ router.get('/', async (req, res) => {
 });
 
 // TODO: Add a route called `/dish/:num` below
+router.get('/dish/:num', async (req, res) => {
+    // needs to use what's after the comma to define what single things to be shown
+  res.render('dish', dishes[req.params.num - 1]);
+})
 
 module.exports = router;

@@ -1,8 +1,10 @@
 // Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
 
-// TODO: Add a comment indicating how this file fits into the MVC framework. 
+// TODO: Add a comment indicating how this file fits into the MVC framework.
+  //this file is part of the model, in how it holds the data that will be seen/manipulated by user
 // TODO: What is it responsible for handling?
-
+  //holds data seen/manipulated by user in Dish class that extends Model(sequalize obj)
+  
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
