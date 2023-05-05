@@ -17,19 +17,25 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'Super secret secret',
   // TODO: Add a comment describing the purpose of adding a cookies object to our options to our session object
+    //so data can be stored in browser as well as db thru browser? written to client
   cookie: {
     // TODO: Add a comment describing the functionality of the maxAge attribute
+      //timeout for cookie/session 
     maxAge: 60 * 60 * 1000,
     // TODO: Add a comment describing the functionality of the httpOnly attribute
+      //route boolen value (default) *prevents front end javascript from reading cookie* prevent cross-site scripting hacks!!!!
     httpOnly: true,
     // TODO: Add a comment describing the functionality of the secure attribute
+      //require an http(s!) connection to serve/store cookies (false for local host!)
     secure: false,
     // TODO: Add a comment describing the functionality of the sameSite attribute
+      //strict setting means the cookie will only be sent along with samesite requests (NEED MATCHING DOMAINS FOR COOKIE REQ)
     sameSite: 'strict',
   },
   resave: false,
   saveUninitialized: true,
   // Sets up session store
+    //this code connects our session to the DB to write in data from session
   store: new SequelizeStore({
     db: sequelize,
   }),

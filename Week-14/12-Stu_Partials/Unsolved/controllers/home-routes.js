@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     const galleries = dbGalleryData.map((gallery) =>
       gallery.get({ plain: true })
     );
-
+    //pass galleries into homepage here
     res.render('homepage', {
       galleries,
     });
