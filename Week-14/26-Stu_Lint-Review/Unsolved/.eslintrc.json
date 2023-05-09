@@ -4,11 +4,16 @@
     "browser": true,
     "commonjs": true,
     "node": true,
-    "es6": true
-    // TODO: Add option to support ** operators
+    "es6": true,
+     // TODO: Add option to support ** operators
+      //use this version of lint to support certain rules(in spec env)
+    "es2017": true
   },
   "rules": {
     // TODO: Add rule to disallow setting variables to undefined
+      //can use warn or off to 
+        // setting things to undefined means more written code-can write a const without defining it means same thing but more DRY
+    "no-undef-init": "error",
     "no-duplicate-case": "error",
     "no-empty": "error",
     "no-extra-semi": "error",
