@@ -13,7 +13,7 @@ mongodb.connect(
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, client) => {
     db = client.db();
-    // Drops any documents, if they exist
+    // Drops any documents, if they exist 
     db.collection('authorList').deleteMany({});
     // Adds data to database
     db.collection('authorList').insertMany(data, (err, res) => {
@@ -61,7 +61,7 @@ app.use(express.json());
 
 app.get('/price-less-than-10', (req, res) => {
   db.collection('authorList')
-    .find({ data: { $lt: 10 } })
+    .find({ 'information.price' : {$lt: 10} })
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
@@ -70,7 +70,10 @@ app.get('/price-less-than-10', (req, res) => {
 
 app.get('/featured-authors', (req, res) => {
   db.collection('authorList')
-    .find({ featured: true })
+  //EMBEDED OBJECTS USE DOT NOTATION TO ACCESS PARAMS
+  //use dot notation to look through object for specific params then pass second params 
+  //this is like regular javascript in how it reaches items inside an object or
+    .find({ 'authors.featured' : true})
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);

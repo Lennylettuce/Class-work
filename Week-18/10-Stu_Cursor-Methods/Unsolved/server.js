@@ -48,6 +48,11 @@ app.use(express.json());
 app.get('/read', (req, res) => {
   db.collection('numberList')
     .find()
+    .sort({ number: -1})
+    //skip 5 largest numbers
+    //once they are set to descending order this will skip those largest numbers
+    .skip(5)
+    .limit(5)
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);

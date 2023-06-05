@@ -7,11 +7,11 @@ const port = 3001;
 const connectionStringURI = `mongodb://127.0.0.1:27017`;
 
 const client = new MongoClient(connectionStringURI);
-
+//so we have instance of a db
 let db;
-
+//name it
 const dbName = 'inventoryDB';
-
+//connect express to Mongo
 client.connect()
   .then(() => {
     console.log('Connected successfully to MongoDB');
@@ -27,7 +27,8 @@ client.connect()
 
 app.use(express.json());
 
-
+//this creates a route /create
+//also adds the functionality to add info below into the collection
 
 app.post('/create', (req, res) => {
   db.collection('bookCollection').insertOne(
@@ -39,6 +40,7 @@ app.post('/create', (req, res) => {
     });
 });
 
+//insertMany can handle many inserts with a new route /create-many
 app.post('/create-many', (req, res) => {
   db.collection('bookCollection').insertMany(
     [
@@ -52,6 +54,7 @@ app.post('/create-many', (req, res) => {
     });
 });
 
+//use /read route calls to our db's book collection, find everything and turn it into readable array
 app.get('/read', (req, res) => {
   db.collection('bookCollection')
     .find({})
