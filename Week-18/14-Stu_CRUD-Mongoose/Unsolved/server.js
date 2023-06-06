@@ -63,6 +63,18 @@ app.post('/find-one-update/:genre', (req, res) => {
   // TODO: Write a route that will find the first instance of a document that contains a name with the value equal to 'Kids'
   // Update that name with the value given from the URL param
   // Return the updated document
+ try {
+  const result = await Genre.findOneAndUpdate(
+    { name: 'Kids' },
+    { name: req.params.genre },
+    //new options give back updated version not old one
+    { new: true }
+  ); 
+
+  res.status(200).json(result);
+ } catch (err) {
+  res.status(500).json({ message: 'Error!'});
+ }
 });
 
 db.once('open', () => {

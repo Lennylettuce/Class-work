@@ -20,8 +20,11 @@ app.get('/all-books', (req, res) => {
 });
 
 app.get('/sum-price', (req, res) => {
+  // filter items in Book
   Book.aggregate(
     [
+      { $match: { inStock: true } },
+      //combine from subcat and does math on them: sum, avg, max and min(this is out output info to be filled in)
       {
         $group: {
           _id: null,
