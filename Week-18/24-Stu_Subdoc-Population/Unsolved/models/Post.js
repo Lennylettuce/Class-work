@@ -14,7 +14,7 @@ const postSchema = new Schema(
     tags: [
       {
         type: 'Tag',
-        ref: 'Tag',
+        ref: 'tag',
       },
     ],
     text: {
