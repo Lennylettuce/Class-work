@@ -14,6 +14,12 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      //this is a regex that looks for a set prop extension as listed below
+        //then use asset/resource from webpage to parse this info to be referenced
+      {
+        test: /\.(png|jpeg|jpg|gif|svg)$/i,
+        type: 'asset/resource'
+      }
     ],
   },
 };

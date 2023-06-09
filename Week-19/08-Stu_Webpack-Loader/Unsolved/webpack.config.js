@@ -22,6 +22,8 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
+            //use this loader available via webpack..this converts our code to be compatible with older versions of code/programs
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env']
           }

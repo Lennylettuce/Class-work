@@ -10,8 +10,22 @@ Click on "Expand View" to get more information about the metrics. Make note of t
 
 * (include as many bullet points as necessary)
 
+* layout shift- how fast it takes to display the first piece of DOM 
+
+* past audits - list of passing 
+
+*
+
 ## PWA optimizations
 
 Scroll down the audit report until you see the `PWA` section that lists the PWA optimizations. Make note of the various aspects of a PWA below (the first one is done for you):
 
 * Registers a service worker that controls page and `start_url`
+
+* what parts of the application qualifies as progressive web app pass as good quality
+
+* shows list of aspects of the application that are good 
+
+* list has links to info about each aspect DONT forget to read them!
+
+*
