@@ -1,4 +1,6 @@
 // TODO: import style.css and add an `#articles` style tag that responds to small screens
+import './css/style.css';
+
 
 const targetEl = document.querySelector('.flexbox');
 // get the articles
@@ -38,5 +40,9 @@ getDevArticles().then((articles) => {
 
 // TODO: Here we check if hot module replacement is enabled. Finish the code block to accept hot swapped modules.
 if (module.hot) {
-  // Code here
+  module.hot.accept((err) => {
+    if (err) {
+      console.error('Cannot apply HMR update', err);
+    }
+  });
 }

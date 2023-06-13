@@ -49,3 +49,6 @@ getDevArticles().then((articles) => {
 
 // TODO: Register the service worker in the browser using the workbox-window library
 // https://developers.google.com/web/tools/workbox/modules/workbox-window
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}

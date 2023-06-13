@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start:dev": "concurently \"cd client && npm run build\" \"cd server && npm run server\" ",
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
     "start": "webpack serve"

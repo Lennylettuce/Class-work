@@ -6,6 +6,10 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
+  // TODO: add devServer config
+  devServer: {
+    hot: 'only',
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -17,7 +21,6 @@ module.exports = {
       template: './index.html',
     }),
   ],
-  // TODO: add devServer config
   module: {
     rules: [
       {

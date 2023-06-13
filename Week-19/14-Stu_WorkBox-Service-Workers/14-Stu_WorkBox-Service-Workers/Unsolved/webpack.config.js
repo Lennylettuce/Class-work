@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // TODO: Explain what the workbox-webpack-plugin does and why it is needed in this case
+  // workbox is used to compile files to make complex applications easier to navigate(service worker management?)
 const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
@@ -19,8 +20,11 @@ module.exports = {
       template: './index.html',
     }),
     // TODO: add a comment explaining what the GenerateSW plugin does
+      //this method does most of the compiling
 
     // TODO: add a comment explaining what the `clientsClaim` and `skipWaiting` options do
+      //clientClaim
+      //skipWaiting READ THESE AGAIN
     new GenerateSW({
       clientsClaim: true,
       skipWaiting: true,

@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // TODO: Import InjectManifest from the workbox-webpack-plugin
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -17,7 +18,10 @@ module.exports = {
       title: 'Dev.to Posts',
       template: './index.html',
     }),
-    // TODO: Add the InjectManifest plugin and provide it a service worker file
+    new GenerateSW ({
+      swDest: 'service-worker.js'
+    })
+    // TODO: Add the InjectManifest plugin and provide it a service worker file code above
     // https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin
   ],
   module: {

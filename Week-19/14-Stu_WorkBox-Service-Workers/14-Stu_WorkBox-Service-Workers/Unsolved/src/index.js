@@ -46,8 +46,10 @@ getDevArticles().then((articles) => {
 });
 
 // TODO: Add a comment describing the functionality of the service worker
+  // the service worker extends funcitonality of workbox
 if ('serviceWorker' in navigator) {
   // TODO: Add a comment what the Workbox constructor does and why it is needed
+    // we imported funcitonality of workbox(library) so it can tell the serivceworker what funcitonality it will have
   const wb = new Workbox('/service-worker.js');
   logger('Service Worker', 'GenerateSW Service Worker is ready', wb);
 

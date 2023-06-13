@@ -2,6 +2,7 @@
   "name": "12-stu_webpack-hmr-unsolved",
   "version": "1.0.0",
   "scripts": {
+    "dev": "webpack-dev-server --open",
     "build": "webpack"
   },
   "license": "MIT",
