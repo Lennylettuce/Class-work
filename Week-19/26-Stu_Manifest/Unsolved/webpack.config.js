@@ -22,6 +22,7 @@ module.exports = () => {
       new GenerateSW(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
+        
       }),
      
     ],
