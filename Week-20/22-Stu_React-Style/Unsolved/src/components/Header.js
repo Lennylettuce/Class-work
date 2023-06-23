@@ -3,13 +3,21 @@ import React from 'react';
 import '../styles/Header.css';
 
 // TODO: Create a styles object called "styles"
+const styles = {
+  section: {
+
+  },
+  heading: {
+
+  }
+}
 
 function Header() {
   // TODO: Add a style attribute to header and the h1 element
 
   return (
-    <header className="header">
-      <h1>Welcome</h1>
+    <header className="header" style= {styles.section}>
+      <h1 style= {styles.heading}>Welcome</h1>
     </header>
   );
 }
