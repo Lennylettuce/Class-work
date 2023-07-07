@@ -9,13 +9,15 @@ import { useStudentContext } from '../utils/StudentContext';
 export default function StudentList() {
   const initialState = useStudentContext();
 
+  //update global state variable, takes in initial statobj and the reducer to be used
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const [newStudentName, setNewStudentName] = useState('');
   const [newStudentMajor, setNewStudentMajor] = useState('');
 
   // TODO: Add a comment explaining what this state variable will be used for after reviewing it's use in the app
-  // Your comment here
+  // update local state obj with new major name var and the function that does the work to update and setting useState to accept this variable
+  // use in payload, new property of this obj
   const [newMajorName, setNewMajorName] = useState('');
 
   return (
@@ -45,7 +47,7 @@ export default function StudentList() {
                         onClick={() => {
                           console.log('🚀 StudentList.js: Dispatched remove!');
                           // TODO: Add a comment explaining the functionality of the REMOVE_STUDENT action when it hits the reducer
-                          // Your comment here
+                          // the dispath function to allow update (global?)state has params of type and payload, type being the action and payload being the data to be accessed/altered
                           return dispatch({
                             type: REMOVE_STUDENT,
                             payload: student.id,
@@ -76,7 +78,7 @@ export default function StudentList() {
               >
                 <option>Choose major...</option>
                 {/* //TODO: Add a commenting explaining what will happen if a major is added to the "Majors" array */}
-                {/* Your comment here */}
+                {/* // updates the global state to include the new major, reloads page to include*/}
                 {state.majors.map((major) => (
                   <option key={major} value={major}>
                     {major}
@@ -100,7 +102,7 @@ export default function StudentList() {
             <h3>Add a New Major</h3>
             <div className="add-major">
               {/* //TODO: Does the setNewMajorName method affect local state or global state the way it is used in this onChange event */}
-              {/* Your comment here */}
+              {/* // local state set with that function, provided by useState hook, only effects the newMajorName */}
               <input
                 value={newMajorName}
                 onChange={(e) => setNewMajorName(e.target.value)}
@@ -114,7 +116,7 @@ export default function StudentList() {
                 onClick={() => {
                   console.log('🚀 StudentList.js: Dispatched add major! ');
                   // TODO: Explain what happens when the ADD_MAJOR action is dispatched to the reducer with a new major
-                  // Your comment here
+                  // takes existing state and add this onto current list of majors
                   return dispatch({
                     type: ADD_MAJOR,
                     payload: newMajorName,

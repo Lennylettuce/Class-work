@@ -17,7 +17,8 @@ const resolvers = {
     thought: async (parent, { thoughtId }) => {
       return Thought.findOne({ _id: thoughtId });
     },
-    me: async (parent, context) => {
+    //assign args
+    me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('thoughts');
       }
